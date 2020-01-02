@@ -1,0 +1,33 @@
+
+<div *ngIf="myName">
+    <h1>{{myName}}'s Albums</h1>
+  </div>
+
+ <div *ngIf="!myName">
+    <h1>All my Albums!</h1>
+  </div>
+
+  
+
+  
+<div *ngFor="let album of albums">
+  <h2>{{album.title}}</h2>
+
+
+  <div class="card" style="width: 18rem;">
+    <a href="/album/{{album.id}}">
+    <img src="{{album.coverPhotoUrl}}" class="card-img-top" alt="{{album.title}}">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">{{album.title}}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+
+
+</div>
+  
+
+
